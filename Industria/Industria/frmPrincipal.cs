@@ -16,5 +16,10 @@ namespace Industria
             cadastro.MdiParent = this;
             cadastro.Show();
         }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
