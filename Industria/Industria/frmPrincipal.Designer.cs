@@ -102,7 +102,6 @@
             this.novoToolStripMenuItem1.Name = "novoToolStripMenuItem1";
             this.novoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.novoToolStripMenuItem1.Text = "Cadastro";
-            this.novoToolStripMenuItem1.Click += new System.EventHandler(this.novoToolStripMenuItem1_Click);
             // 
             // consultaToolStripMenuItem6
             // 
@@ -361,6 +360,7 @@
             this.alteraToolStripMenuItem2.Name = "alteraToolStripMenuItem2";
             this.alteraToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
             this.alteraToolStripMenuItem2.Text = "Altera";
+            this.alteraToolStripMenuItem2.Click += new System.EventHandler(this.alteraToolStripMenuItem2_Click);
             // 
             // frmPrincipal
             // 

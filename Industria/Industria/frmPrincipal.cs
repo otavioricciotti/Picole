@@ -11,11 +11,7 @@ namespace Industria
         }
 
         frmProduto prod = new frmProduto();
-
-        private void novoToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
+        frmProdutoAltera prodA = new frmProdutoAltera();
 
         private void cadastroToolStripMenuItem2_Click(object sender, EventArgs e)
         {
@@ -23,6 +19,15 @@ namespace Industria
             if (prod.Visible == false)
             {
                 prod.Show();
+            }
+        }
+
+        private void alteraToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            prodA.MdiParent = this;
+            if (prodA.Visible == false)
+            {
+                prodA.Show();
             }
         }
     }
