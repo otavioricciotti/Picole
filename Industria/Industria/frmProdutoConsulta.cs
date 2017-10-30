@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Industria
 {
-    public partial class frmProduto : Form
+    public partial class frmProdutoConsulta : Form
     {
-        public frmProduto()
+        public frmProdutoConsulta()
         {
             InitializeComponent();
         }

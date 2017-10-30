@@ -1,6 +1,6 @@
 ﻿namespace Industria
 {
-    partial class frmProduto
+    partial class frmProdutoCadastra
     {
         /// <summary>
         /// Required designer variable.
@@ -133,7 +133,7 @@
             this.comboBox1.Size = new System.Drawing.Size(116, 21);
             this.comboBox1.TabIndex = 10;
             // 
-            // frmProduto
+            // frmProdutoCadastra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -153,10 +153,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmProduto";
+            this.Name = "frmProdutoCadastra";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Cadastro de produto";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmProdutoCadastra_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

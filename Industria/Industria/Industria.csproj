@@ -52,11 +52,11 @@
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProduto.cs">
+    <Compile Include="frmProdutoCadastra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProduto.Designer.cs">
-      <DependentUpon>frmProduto.cs</DependentUpon>
+    <Compile Include="frmProdutoCadastra.Designer.cs">
+      <DependentUpon>frmProdutoCadastra.cs</DependentUpon>
     </Compile>
     <Compile Include="frmProdutoAltera.cs">
       <SubType>Form</SubType>
@@ -64,16 +64,25 @@
     <Compile Include="frmProdutoAltera.Designer.cs">
       <DependentUpon>frmProdutoAltera.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmProdutoConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProdutoConsulta.Designer.cs">
+      <DependentUpon>frmProdutoConsulta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmProduto.resx">
-      <DependentUpon>frmProduto.cs</DependentUpon>
+    <EmbeddedResource Include="frmProdutoCadastra.resx">
+      <DependentUpon>frmProdutoCadastra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProdutoAltera.resx">
       <DependentUpon>frmProdutoAltera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProdutoConsulta.resx">
+      <DependentUpon>frmProdutoConsulta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

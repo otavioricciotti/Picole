@@ -10,11 +10,13 @@ namespace Industria
             InitializeComponent();
         }
 
-        frmProduto prod = new frmProduto();
+        frmProdutoCadastra prod = new frmProdutoCadastra();
         frmProdutoAltera prodA = new frmProdutoAltera();
+        frmProdutoConsulta prodC = new frmProdutoConsulta();
 
         private void cadastroToolStripMenuItem2_Click(object sender, EventArgs e)
         {
+            frmProdutoCadastra prod = new frmProdutoCadastra();
             prod.MdiParent = this;
             if (prod.Visible == false)
             {
@@ -28,6 +30,15 @@ namespace Industria
             if (prodA.Visible == false)
             {
                 prodA.Show();
+            }
+        }
+
+        private void consultaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            prodC.MdiParent = this;
+            if (prodC.Visible == false)
+            {
+                prodC.Show();
             }
         }
     }
