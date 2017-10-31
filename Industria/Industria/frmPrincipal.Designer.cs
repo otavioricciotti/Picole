@@ -100,19 +100,19 @@
             // novoToolStripMenuItem1
             // 
             this.novoToolStripMenuItem1.Name = "novoToolStripMenuItem1";
-            this.novoToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
+            this.novoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.novoToolStripMenuItem1.Text = "Cadastro";
             // 
             // consultaToolStripMenuItem6
             // 
             this.consultaToolStripMenuItem6.Name = "consultaToolStripMenuItem6";
-            this.consultaToolStripMenuItem6.Size = new System.Drawing.Size(126, 22);
+            this.consultaToolStripMenuItem6.Size = new System.Drawing.Size(152, 22);
             this.consultaToolStripMenuItem6.Text = "Consulta";
             // 
             // relatóriosToolStripMenuItem
             // 
             this.relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
-            this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.relatóriosToolStripMenuItem.Text = "Relatórios";
             // 
             // arquivoToolStripMenuItem
@@ -170,13 +170,13 @@
             // cadastroToolStripMenuItem3
             // 
             this.cadastroToolStripMenuItem3.Name = "cadastroToolStripMenuItem3";
-            this.cadastroToolStripMenuItem3.Size = new System.Drawing.Size(121, 22);
+            this.cadastroToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
             this.cadastroToolStripMenuItem3.Text = "Cadastro";
             // 
             // consultaToolStripMenuItem2
             // 
             this.consultaToolStripMenuItem2.Name = "consultaToolStripMenuItem2";
-            this.consultaToolStripMenuItem2.Size = new System.Drawing.Size(121, 22);
+            this.consultaToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
             this.consultaToolStripMenuItem2.Text = "Consulta";
             // 
             // receitaToolStripMenuItem1
@@ -191,13 +191,13 @@
             // cadastroToolStripMenuItem4
             // 
             this.cadastroToolStripMenuItem4.Name = "cadastroToolStripMenuItem4";
-            this.cadastroToolStripMenuItem4.Size = new System.Drawing.Size(121, 22);
+            this.cadastroToolStripMenuItem4.Size = new System.Drawing.Size(152, 22);
             this.cadastroToolStripMenuItem4.Text = "Cadastro";
             // 
             // consultaToolStripMenuItem3
             // 
             this.consultaToolStripMenuItem3.Name = "consultaToolStripMenuItem3";
-            this.consultaToolStripMenuItem3.Size = new System.Drawing.Size(121, 22);
+            this.consultaToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
             this.consultaToolStripMenuItem3.Text = "Consulta";
             // 
             // estoqueToolStripMenuItem1
@@ -377,7 +377,9 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menu;
             this.Name = "frmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Indústria de Picolé";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
             this.ResumeLayout(false);
