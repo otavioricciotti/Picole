@@ -10,17 +10,11 @@ namespace Industria
 {
     class bd
     {
-        /*---------------------------------------------------------------*/
-        private string conexao = "Data Source=192.168.1.248;" +
-                                 "Initial Catalog=industria;" +
-                                 "User id=otavio;" +
-                                 "Password=ota54321;";
-        /*---------------------------------------------------------------*/
 
         public void TestaConexao()
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = conexao;
+            conn.ConnectionString = Properties.Settings.Default.conn;
 
             conn.Open();
         }
@@ -29,7 +23,7 @@ namespace Industria
         {
             DataTable dados = new DataTable();
 
-            using (SqlConnection conn = new SqlConnection(conexao))
+            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.conn))
             {
                 SqlDataAdapter da = new SqlDataAdapter();
                 da.SelectCommand = new SqlCommand("select * from"+nome_tabela, conn);

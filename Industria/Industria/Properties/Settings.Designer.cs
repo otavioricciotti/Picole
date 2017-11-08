@@ -22,5 +22,18 @@ namespace Industria.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.1.248;Initial Catalog=industria;User id=otavio;Password=ota54" +
+            "321")]
+        public string conn {
+            get {
+                return ((string)(this["conn"]));
+            }
+            set {
+                this["conn"] = value;
+            }
+        }
     }
 }
