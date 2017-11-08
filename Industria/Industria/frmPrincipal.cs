@@ -41,5 +41,19 @@ namespace Industria
                 prodC.Show();
             }
         }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+            bd bd = new bd();
+            try
+            {
+                bd.TestaConexao();
+                MessageBox.Show("DEU CERTO CARAI");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
