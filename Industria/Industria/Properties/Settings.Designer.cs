@@ -23,16 +23,15 @@ namespace Industria.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.1.248;Initial Catalog=industria;User id=otavio;Password=ota54" +
-            "321")]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\otavio.ricciotti\\Sou" +
+            "rce\\Repos\\Picole\\Industria\\SQL\\industria.mdf;Integrated Security=True;Connect Ti" +
+            "meout=30")]
         public string conn {
             get {
                 return ((string)(this["conn"]));
-            }
-            set {
-                this["conn"] = value;
             }
         }
     }

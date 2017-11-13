@@ -48,7 +48,7 @@ namespace Industria
             try
             {
                 bd.TestaConexao();
-                MessageBox.Show("DEU CERTO CARAI");
+                MessageBox.Show("DEU CERTO!");
             }
             catch (Exception ex)
             {
