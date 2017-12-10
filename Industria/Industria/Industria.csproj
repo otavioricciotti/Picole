@@ -66,11 +66,11 @@
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProdutoCadastra.cs">
+    <Compile Include="frmProdutoCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProdutoCadastra.Designer.cs">
-      <DependentUpon>frmProdutoCadastra.cs</DependentUpon>
+    <Compile Include="frmProdutoCadastro.Designer.cs">
+      <DependentUpon>frmProdutoCadastro.cs</DependentUpon>
     </Compile>
     <Compile Include="frmProdutoConsulta.cs">
       <SubType>Form</SubType>
@@ -83,8 +83,8 @@
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmProdutoCadastra.resx">
-      <DependentUpon>frmProdutoCadastra.cs</DependentUpon>
+    <EmbeddedResource Include="frmProdutoCadastro.resx">
+      <DependentUpon>frmProdutoCadastro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProdutoConsulta.resx">
       <DependentUpon>frmProdutoConsulta.cs</DependentUpon>

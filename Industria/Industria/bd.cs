@@ -33,6 +33,7 @@ namespace Industria
             return dados;
         }
 
+        // FORM CONSULTA DE PRODUTO
         public DataTable consulta_produto(int id_produto)
         {
             DataTable dados = new DataTable();
@@ -49,7 +50,6 @@ namespace Industria
                 comando.Append("where p.id_produto = @id_produto ");
 
                 comando.Replace("@id_produto", id_produto.ToString());
-                //System.Windows.Forms.MessageBox.Show(comando.ToString());
 
                 using (SqlDataAdapter da = new SqlDataAdapter(comando.ToString(), conn))
                 {
@@ -66,5 +66,106 @@ namespace Industria
 
             return dados;
         }
+
+        // FORM CADASTRO DE PRODUTO
+        public DataTable preenche_cmbTipo()
+        {
+            DataTable dados = new DataTable();
+
+            using (SqlConnection conn = new SqlConnection(con))
+            {
+                string comando = "select descricao from def_tipo_produto";
+                using (SqlDataAdapter da = new SqlDataAdapter(comando, conn))
+                {
+                    try
+                    {
+                        da.Fill(dados);
+                    }
+                    catch (Exception ex)
+                    {
+                        System.Windows.Forms.MessageBox.Show(ex.Message);
+                    }
+                }
+            }
+
+            return dados;
+        }
+        public DataTable preenche_cmbMedida()
+        {
+            DataTable dados = new DataTable();
+
+            using (SqlConnection conn = new SqlConnection(con))
+            {
+                string comando = "select descricao from medida";
+                using (SqlDataAdapter da = new SqlDataAdapter(comando, conn))
+                {
+                    try
+                    {
+                        da.Fill(dados);
+                    }
+                    catch (Exception ex)
+                    {
+                        System.Windows.Forms.MessageBox.Show(ex.Message);
+                    }
+                }
+            }
+
+            return dados;
+        }
+        public void cadastro_produto(string tipo_produto, string medida, string descricao, int cx_fechada)
+        {
+            using (SqlConnection conn = new SqlConnection(con))
+            {
+                StringBuilder comando = new StringBuilder();
+
+                comando.Append("insert into produto values ");
+                comando.Append("((select max(id_produto)+1 from produto) ");
+                comando.Append(", (select id_tipo_produto from def_tipo_produto where descricao = @tipo_produto) ");
+                comando.Append(", (select id_medida from medida where descricao = @medida) ");
+                comando.Append(", null ");
+                comando.Append(", null ");
+                comando.Append(", @descricao ");
+                comando.Append(", @cx_fechada) ");
+
+                SqlCommand cmd = new SqlCommand(comando.ToString(), conn);
+                cmd.Parameters.AddWithValue("@tipo_produto", tipo_produto);
+                cmd.Parameters.AddWithValue("@medida", medida);
+                cmd.Parameters.AddWithValue("@descricao", descricao);
+                cmd.Parameters.AddWithValue("@cx_fechada", cx_fechada);
+
+                try
+                {
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+                catch (Exception ex)
+                {
+                    System.Windows.Forms.MessageBox.Show(ex.Message);
+                }
+            }
+        }
+        public int retorno_id_produto()
+        {
+            using (SqlConnection conn = new SqlConnection(con))
+            {
+                int retorno = 0;
+
+                SqlCommand cmd = new SqlCommand("select max(id_produto) from produto", conn);
+                try
+                {
+                    conn.Open();
+                    retorno = (int)cmd.ExecuteScalar();
+                    conn.Close();
+                }
+                catch (Exception ex)
+                {
+                    System.Windows.Forms.MessageBox.Show(ex.Message);
+                }
+
+                return retorno;
+            }
+        }
+
     }
 }

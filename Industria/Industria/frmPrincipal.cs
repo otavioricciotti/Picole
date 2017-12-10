@@ -10,12 +10,12 @@ namespace Industria
             InitializeComponent();
         }
 
-        frmProdutoCadastra prod = new frmProdutoCadastra();
+        frmProdutoCadastro prod = new frmProdutoCadastro();
         frmProdutoConsulta prodC = new frmProdutoConsulta();
 
         private void cadastroToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            frmProdutoCadastra prod = new frmProdutoCadastra();
+            frmProdutoCadastro prod = new frmProdutoCadastro();
             prod.MdiParent = this;
             if (prod.Visible == false)
             {
