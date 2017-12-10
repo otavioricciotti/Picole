@@ -12,6 +12,7 @@ namespace Industria
 
         frmProdutoCadastro prod = new frmProdutoCadastro();
         frmProdutoConsulta prodC = new frmProdutoConsulta();
+        frmProdutoLista pdl = new frmProdutoLista();
 
         private void cadastroToolStripMenuItem2_Click(object sender, EventArgs e)
         {
@@ -43,6 +44,15 @@ namespace Industria
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void listaTécnicaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            pdl.MdiParent = this;
+            if (pdl.Visible == false)
+            {
+                pdl.Show();
             }
         }
     }

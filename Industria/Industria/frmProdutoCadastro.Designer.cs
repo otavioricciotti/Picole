@@ -158,6 +158,7 @@
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.lblCodigo2);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmProdutoCadastro";

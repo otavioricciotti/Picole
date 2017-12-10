@@ -141,14 +141,14 @@
             // cadastroToolStripMenuItem2
             // 
             this.cadastroToolStripMenuItem2.Name = "cadastroToolStripMenuItem2";
-            this.cadastroToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.cadastroToolStripMenuItem2.Size = new System.Drawing.Size(121, 22);
             this.cadastroToolStripMenuItem2.Text = "Cadastro";
             this.cadastroToolStripMenuItem2.Click += new System.EventHandler(this.cadastroToolStripMenuItem2_Click);
             // 
             // consultaToolStripMenuItem1
             // 
             this.consultaToolStripMenuItem1.Name = "consultaToolStripMenuItem1";
-            this.consultaToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.consultaToolStripMenuItem1.Size = new System.Drawing.Size(121, 22);
             this.consultaToolStripMenuItem1.Text = "Consulta";
             this.consultaToolStripMenuItem1.Click += new System.EventHandler(this.consultaToolStripMenuItem1_Click);
             // 
@@ -157,6 +157,7 @@
             this.listaTécnicaToolStripMenuItem1.Name = "listaTécnicaToolStripMenuItem1";
             this.listaTécnicaToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.listaTécnicaToolStripMenuItem1.Text = "Lista técnica";
+            this.listaTécnicaToolStripMenuItem1.Click += new System.EventHandler(this.listaTécnicaToolStripMenuItem1_Click);
             // 
             // receitaToolStripMenuItem1
             // 
