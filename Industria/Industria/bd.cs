@@ -460,5 +460,37 @@ namespace Industria
                 return retorno;
             }
         }
+
+        // FORM ENTIDADE CONSULTA
+        public DataTable entidadeConsulta(int id)
+        {
+            DataTable dados = new DataTable();
+
+            using (SqlConnection conn = new SqlConnection(con))
+            {
+                StringBuilder comando = new StringBuilder();
+
+                comando.Append("select e.id_entidade, e.razao_social, e.fantasia, ");
+                comando.Append("e.cpf_cnpj, dte.descricao as tipo_entidade ");
+                comando.Append("from entidade e (nolock) ");
+                comando.Append("join def_tipo_entidade dte (nolock) on e.id_tipo_entidade = dte.id_tipo_entidade ");
+                comando.Append("where e.id_entidade = @id ");
+
+                using (SqlDataAdapter da = new SqlDataAdapter(comando.ToString(), conn))
+                {
+                    da.SelectCommand.Parameters.AddWithValue("@id", id);
+
+                    try
+                    {
+                        da.Fill(dados);
+                    }
+                    catch (Exception ex)
+                    {
+                        System.Windows.Forms.MessageBox.Show(ex.Message);
+                    }
+                }
+            }
+            return dados;
+        }
     }
 }

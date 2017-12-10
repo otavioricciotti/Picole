@@ -80,5 +80,16 @@ namespace Industria
                 pes.Show();
             }
         }
+
+        private void consultaToolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+            frmEntidadeConsulta feco = new frmEntidadeConsulta();
+
+            feco.MdiParent = this;
+            if (feco.Visible == false)
+            {
+                feco.Show();
+            }
+        }
     }
 }
