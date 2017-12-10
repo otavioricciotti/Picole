@@ -13,6 +13,7 @@ namespace Industria
         frmProdutoCadastro prod = new frmProdutoCadastro();
         frmProdutoConsulta prodC = new frmProdutoConsulta();
         frmProdutoLista pdl = new frmProdutoLista();
+        frmProdutoEstoque pes = new frmProdutoEstoque();
 
         private void cadastroToolStripMenuItem2_Click(object sender, EventArgs e)
         {
@@ -53,6 +54,25 @@ namespace Industria
             if (pdl.Visible == false)
             {
                 pdl.Show();
+            }
+        }
+
+        private void novoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void consultaToolStripMenuItem8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void estoqueToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            pes.MdiParent = this;
+            if (pes.Visible == false)
+            {
+                pes.Show();
             }
         }
     }

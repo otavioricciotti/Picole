@@ -355,5 +355,34 @@ namespace Industria
             return dados;
 
         }
+
+        // FORM PRODUTO ESTOQUE
+        public DataTable produto_estoque()
+        {
+            DataTable dados = new DataTable();
+
+            using (SqlConnection conn = new SqlConnection(con))
+            {
+                StringBuilder comando = new StringBuilder();
+
+                comando.Append("select pe.id_produto, p.descricao, pe.estoque ");
+                comando.Append("from produto_estoque pe(nolock) ");
+                comando.Append("join produto p(nolock) on pe.id_produto = p.id_produto ");
+
+                using (SqlDataAdapter da = new SqlDataAdapter(comando.ToString(), conn))
+                {
+                    try
+                    {
+                        da.Fill(dados);
+                    }
+                    catch (Exception ex)
+                    {
+                        System.Windows.Forms.MessageBox.Show(ex.Message);
+                    }
+                }
+            }
+
+            return dados;
+        }
     }
 }
