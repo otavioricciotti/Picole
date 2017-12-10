@@ -59,7 +59,12 @@ namespace Industria
 
         private void novoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            frmEntidadeCadastro fec = new frmEntidadeCadastro();
+            fec.MdiParent = this;
+            if (fec.Visible == false)
+            {
+                fec.Show();
+            }
         }
 
         private void consultaToolStripMenuItem8_Click(object sender, EventArgs e)
