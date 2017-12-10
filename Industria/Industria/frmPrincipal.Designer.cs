@@ -37,18 +37,14 @@
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.alteraToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.listaTécnicaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastroToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.receitaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastroToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultaToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.estoqueToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.recebimentoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaToolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
             this.relatóriosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.listaDeProdutosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroToolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.compraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -74,7 +70,6 @@
             this.cadastroToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.relatóriosToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.status = new System.Windows.Forms.StatusStrip();
-            this.listaDeProdutosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -138,7 +133,6 @@
             // 
             this.cadastroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastroToolStripMenuItem2,
-            this.alteraToolStripMenuItem2,
             this.consultaToolStripMenuItem1});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
@@ -147,65 +141,28 @@
             // cadastroToolStripMenuItem2
             // 
             this.cadastroToolStripMenuItem2.Name = "cadastroToolStripMenuItem2";
-            this.cadastroToolStripMenuItem2.Size = new System.Drawing.Size(121, 22);
+            this.cadastroToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
             this.cadastroToolStripMenuItem2.Text = "Cadastro";
             this.cadastroToolStripMenuItem2.Click += new System.EventHandler(this.cadastroToolStripMenuItem2_Click);
-            // 
-            // alteraToolStripMenuItem2
-            // 
-            this.alteraToolStripMenuItem2.Name = "alteraToolStripMenuItem2";
-            this.alteraToolStripMenuItem2.Size = new System.Drawing.Size(121, 22);
-            this.alteraToolStripMenuItem2.Text = "Altera";
-            this.alteraToolStripMenuItem2.Click += new System.EventHandler(this.alteraToolStripMenuItem2_Click);
             // 
             // consultaToolStripMenuItem1
             // 
             this.consultaToolStripMenuItem1.Name = "consultaToolStripMenuItem1";
-            this.consultaToolStripMenuItem1.Size = new System.Drawing.Size(121, 22);
+            this.consultaToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.consultaToolStripMenuItem1.Text = "Consulta";
             this.consultaToolStripMenuItem1.Click += new System.EventHandler(this.consultaToolStripMenuItem1_Click);
             // 
             // listaTécnicaToolStripMenuItem1
             // 
-            this.listaTécnicaToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastroToolStripMenuItem3,
-            this.consultaToolStripMenuItem2});
             this.listaTécnicaToolStripMenuItem1.Name = "listaTécnicaToolStripMenuItem1";
             this.listaTécnicaToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.listaTécnicaToolStripMenuItem1.Text = "Lista técnica";
             // 
-            // cadastroToolStripMenuItem3
-            // 
-            this.cadastroToolStripMenuItem3.Name = "cadastroToolStripMenuItem3";
-            this.cadastroToolStripMenuItem3.Size = new System.Drawing.Size(121, 22);
-            this.cadastroToolStripMenuItem3.Text = "Cadastro";
-            // 
-            // consultaToolStripMenuItem2
-            // 
-            this.consultaToolStripMenuItem2.Name = "consultaToolStripMenuItem2";
-            this.consultaToolStripMenuItem2.Size = new System.Drawing.Size(121, 22);
-            this.consultaToolStripMenuItem2.Text = "Consulta";
-            // 
             // receitaToolStripMenuItem1
             // 
-            this.receitaToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastroToolStripMenuItem4,
-            this.consultaToolStripMenuItem3});
             this.receitaToolStripMenuItem1.Name = "receitaToolStripMenuItem1";
             this.receitaToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.receitaToolStripMenuItem1.Text = "Receita";
-            // 
-            // cadastroToolStripMenuItem4
-            // 
-            this.cadastroToolStripMenuItem4.Name = "cadastroToolStripMenuItem4";
-            this.cadastroToolStripMenuItem4.Size = new System.Drawing.Size(121, 22);
-            this.cadastroToolStripMenuItem4.Text = "Cadastro";
-            // 
-            // consultaToolStripMenuItem3
-            // 
-            this.consultaToolStripMenuItem3.Name = "consultaToolStripMenuItem3";
-            this.consultaToolStripMenuItem3.Size = new System.Drawing.Size(121, 22);
-            this.consultaToolStripMenuItem3.Text = "Consulta";
             // 
             // estoqueToolStripMenuItem1
             // 
@@ -235,6 +192,12 @@
             this.relatóriosToolStripMenuItem1.Name = "relatóriosToolStripMenuItem1";
             this.relatóriosToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.relatóriosToolStripMenuItem1.Text = "Relatórios";
+            // 
+            // listaDeProdutosToolStripMenuItem
+            // 
+            this.listaDeProdutosToolStripMenuItem.Name = "listaDeProdutosToolStripMenuItem";
+            this.listaDeProdutosToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.listaDeProdutosToolStripMenuItem.Text = "Lista de produtos";
             // 
             // pedidoToolStripMenuItem
             // 
@@ -417,12 +380,6 @@
             this.status.TabIndex = 2;
             this.status.Text = "status";
             // 
-            // listaDeProdutosToolStripMenuItem
-            // 
-            this.listaDeProdutosToolStripMenuItem.Name = "listaDeProdutosToolStripMenuItem";
-            this.listaDeProdutosToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
-            this.listaDeProdutosToolStripMenuItem.Text = "Lista de produtos";
-            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -458,11 +415,7 @@
         private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem listaTécnicaToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem receitaToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem entradaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem;
@@ -488,7 +441,6 @@
         private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem6;
         private System.Windows.Forms.ToolStripMenuItem alteraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem alteraToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem compraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vendaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem compraToolStripMenuItem1;

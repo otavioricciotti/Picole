@@ -60,12 +60,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="bd.cs" />
-    <Compile Include="frmEntidadeCadastra.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmEntidadeCadastra.Designer.cs">
-      <DependentUpon>frmEntidadeCadastra.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,12 +72,6 @@
     <Compile Include="frmProdutoCadastra.Designer.cs">
       <DependentUpon>frmProdutoCadastra.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProdutoAltera.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmProdutoAltera.Designer.cs">
-      <DependentUpon>frmProdutoAltera.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmProdutoConsulta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,17 +80,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmEntidadeCadastra.resx">
-      <DependentUpon>frmEntidadeCadastra.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProdutoCadastra.resx">
       <DependentUpon>frmProdutoCadastra.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmProdutoAltera.resx">
-      <DependentUpon>frmProdutoAltera.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProdutoConsulta.resx">
       <DependentUpon>frmProdutoConsulta.cs</DependentUpon>

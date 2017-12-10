@@ -22,17 +22,5 @@ namespace Industria.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\otavio.ricciotti\\Sou" +
-            "rce\\Repos\\Picole\\Industria\\SQL\\industria.mdf;Integrated Security=True;Connect Ti" +
-            "meout=30")]
-        public string conn {
-            get {
-                return ((string)(this["conn"]));
-            }
-        }
     }
 }
