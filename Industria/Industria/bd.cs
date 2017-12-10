@@ -307,5 +307,53 @@ namespace Industria
                 }
             }
         }
+
+        // FORM RECEITA DE PRODUTO (DEPRECIADO)
+        public DataTable preenche_cmbFaseInsere()
+        {
+            DataTable dados = new DataTable();
+
+            using (SqlConnection conn = new SqlConnection(con))
+            {
+                string comando = "select descricao from fase";
+                using (SqlDataAdapter da = new SqlDataAdapter(comando, conn))
+                {
+                    try
+                    {
+                        da.Fill(dados);
+                    }
+                    catch (Exception ex)
+                    {
+                        System.Windows.Forms.MessageBox.Show(ex.Message);
+                    }
+                }
+            }
+
+            return dados;
+
+        }
+        public DataTable preenche_cmbFaseRemove()
+        {
+            DataTable dados = new DataTable();
+
+            using (SqlConnection conn = new SqlConnection(con))
+            {
+                string comando = "select descricao from produto where id_tipo_produto = 2";
+                using (SqlDataAdapter da = new SqlDataAdapter(comando, conn))
+                {
+                    try
+                    {
+                        da.Fill(dados);
+                    }
+                    catch (Exception ex)
+                    {
+                        System.Windows.Forms.MessageBox.Show(ex.Message);
+                    }
+                }
+            }
+
+            return dados;
+
+        }
     }
 }
