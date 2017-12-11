@@ -34,20 +34,20 @@
             this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cmbProduto = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtQtde = new System.Windows.Forms.TextBox();
-            this.txtEstoque = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnInserir = new System.Windows.Forms.Button();
-            this.cmbProdutoRemover = new System.Windows.Forms.ComboBox();
-            this.btnRemover = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnGravar = new System.Windows.Forms.Button();
-            this.Cancelar = new System.Windows.Forms.Button();
             this.produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnRemover = new System.Windows.Forms.Button();
+            this.cmbProdutoRemover = new System.Windows.Forms.ComboBox();
+            this.btnInserir = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtEstoque = new System.Windows.Forms.TextBox();
+            this.txtQtde = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbProduto = new System.Windows.Forms.ComboBox();
+            this.btnGravar = new System.Windows.Forms.Button();
+            this.Cancelar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -124,88 +124,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Itens";
             // 
-            // cmbProduto
-            // 
-            this.cmbProduto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbProduto.FormattingEnabled = true;
-            this.cmbProduto.Location = new System.Drawing.Point(62, 19);
-            this.cmbProduto.Name = "cmbProduto";
-            this.cmbProduto.Size = new System.Drawing.Size(178, 21);
-            this.cmbProduto.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Produto:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 50);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Qtde:";
-            // 
-            // txtQtde
-            // 
-            this.txtQtde.Location = new System.Drawing.Point(48, 46);
-            this.txtQtde.Name = "txtQtde";
-            this.txtQtde.Size = new System.Drawing.Size(66, 20);
-            this.txtQtde.TabIndex = 3;
-            this.txtQtde.TextChanged += new System.EventHandler(this.txtQtde_TextChanged);
-            // 
-            // txtEstoque
-            // 
-            this.txtEstoque.Location = new System.Drawing.Point(176, 46);
-            this.txtEstoque.Name = "txtEstoque";
-            this.txtEstoque.Size = new System.Drawing.Size(64, 20);
-            this.txtEstoque.TabIndex = 4;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(121, 50);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 13);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Estoque:";
-            // 
-            // btnInserir
-            // 
-            this.btnInserir.Location = new System.Drawing.Point(246, 19);
-            this.btnInserir.Name = "btnInserir";
-            this.btnInserir.Size = new System.Drawing.Size(75, 47);
-            this.btnInserir.TabIndex = 6;
-            this.btnInserir.Text = "Inserir";
-            this.btnInserir.UseVisualStyleBackColor = true;
-            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
-            // 
-            // cmbProdutoRemover
-            // 
-            this.cmbProdutoRemover.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbProdutoRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbProdutoRemover.FormattingEnabled = true;
-            this.cmbProdutoRemover.Location = new System.Drawing.Point(327, 19);
-            this.cmbProdutoRemover.Name = "cmbProdutoRemover";
-            this.cmbProdutoRemover.Size = new System.Drawing.Size(165, 21);
-            this.cmbProdutoRemover.TabIndex = 7;
-            // 
-            // btnRemover
-            // 
-            this.btnRemover.Location = new System.Drawing.Point(327, 44);
-            this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(165, 23);
-            this.btnRemover.TabIndex = 8;
-            this.btnRemover.Text = "Remover";
-            this.btnRemover.UseVisualStyleBackColor = true;
-            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -220,6 +138,107 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(486, 246);
             this.dataGridView1.TabIndex = 9;
+            // 
+            // produto
+            // 
+            this.produto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.produto.DataPropertyName = "descricao";
+            this.produto.HeaderText = "Descrição";
+            this.produto.Name = "produto";
+            this.produto.ReadOnly = true;
+            // 
+            // quantidade
+            // 
+            this.quantidade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.quantidade.DataPropertyName = "quantidade";
+            this.quantidade.HeaderText = "Qtde";
+            this.quantidade.Name = "quantidade";
+            this.quantidade.ReadOnly = true;
+            this.quantidade.Width = 55;
+            // 
+            // btnRemover
+            // 
+            this.btnRemover.Location = new System.Drawing.Point(327, 44);
+            this.btnRemover.Name = "btnRemover";
+            this.btnRemover.Size = new System.Drawing.Size(165, 23);
+            this.btnRemover.TabIndex = 8;
+            this.btnRemover.Text = "Remover";
+            this.btnRemover.UseVisualStyleBackColor = true;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
+            // 
+            // cmbProdutoRemover
+            // 
+            this.cmbProdutoRemover.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbProdutoRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbProdutoRemover.FormattingEnabled = true;
+            this.cmbProdutoRemover.Location = new System.Drawing.Point(327, 19);
+            this.cmbProdutoRemover.Name = "cmbProdutoRemover";
+            this.cmbProdutoRemover.Size = new System.Drawing.Size(165, 21);
+            this.cmbProdutoRemover.TabIndex = 7;
+            // 
+            // btnInserir
+            // 
+            this.btnInserir.Location = new System.Drawing.Point(246, 19);
+            this.btnInserir.Name = "btnInserir";
+            this.btnInserir.Size = new System.Drawing.Size(75, 47);
+            this.btnInserir.TabIndex = 6;
+            this.btnInserir.Text = "Inserir";
+            this.btnInserir.UseVisualStyleBackColor = true;
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(121, 50);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 13);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Estoque:";
+            // 
+            // txtEstoque
+            // 
+            this.txtEstoque.Location = new System.Drawing.Point(176, 46);
+            this.txtEstoque.Name = "txtEstoque";
+            this.txtEstoque.Size = new System.Drawing.Size(64, 20);
+            this.txtEstoque.TabIndex = 4;
+            // 
+            // txtQtde
+            // 
+            this.txtQtde.Location = new System.Drawing.Point(48, 46);
+            this.txtQtde.Name = "txtQtde";
+            this.txtQtde.Size = new System.Drawing.Size(66, 20);
+            this.txtQtde.TabIndex = 3;
+            this.txtQtde.TextChanged += new System.EventHandler(this.txtQtde_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(9, 50);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(33, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Qtde:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(9, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Produto:";
+            // 
+            // cmbProduto
+            // 
+            this.cmbProduto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbProduto.FormattingEnabled = true;
+            this.cmbProduto.Location = new System.Drawing.Point(62, 19);
+            this.cmbProduto.Name = "cmbProduto";
+            this.cmbProduto.Size = new System.Drawing.Size(178, 21);
+            this.cmbProduto.TabIndex = 0;
+            this.cmbProduto.SelectedIndexChanged += new System.EventHandler(this.cmbProduto_SelectedIndexChanged);
+            this.cmbProduto.TextChanged += new System.EventHandler(this.cmbProduto_TextChanged);
             // 
             // btnGravar
             // 
@@ -240,23 +259,6 @@
             this.Cancelar.Text = "Cancelar";
             this.Cancelar.UseVisualStyleBackColor = true;
             this.Cancelar.Click += new System.EventHandler(this.Cancelar_Click);
-            // 
-            // produto
-            // 
-            this.produto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.produto.DataPropertyName = "descricao";
-            this.produto.HeaderText = "Descrição";
-            this.produto.Name = "produto";
-            this.produto.ReadOnly = true;
-            // 
-            // quantidade
-            // 
-            this.quantidade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.quantidade.DataPropertyName = "quantidade";
-            this.quantidade.HeaderText = "Qtde";
-            this.quantidade.Name = "quantidade";
-            this.quantidade.ReadOnly = true;
-            this.quantidade.Width = 55;
             // 
             // frmPedidoCompra
             // 

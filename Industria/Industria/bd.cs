@@ -510,6 +510,7 @@ namespace Industria
                     catch (Exception ex)
                     {
                         System.Windows.Forms.MessageBox.Show(ex.Message);
+                        //System.Windows.Forms.MessageBox.Show("1");
                     }
                 }
             }
@@ -533,6 +534,7 @@ namespace Industria
                     catch (Exception ex)
                     {
                         System.Windows.Forms.MessageBox.Show(ex.Message);
+                        //System.Windows.Forms.MessageBox.Show("2");
                     }
                 }
             }
@@ -560,37 +562,32 @@ namespace Industria
                     catch (Exception ex)
                     {
                         System.Windows.Forms.MessageBox.Show(ex.Message);
+                        //System.Windows.Forms.MessageBox.Show("3");
                     }
                 }
             }
 
             return dados;
         }
-        public double pedido_produto_estoque(string produto)
+        public string pedido_produto_estoque(string produto)
         {
             using (SqlConnection conn = new SqlConnection(con))
             {
-                double retorno = 0;
+                string retorno = "";
 
                 StringBuilder comando = new StringBuilder();
 
                 comando.Append("select pe.estoque ");
-                comando.Append("from produto_estoque pe(nolock) ");
-                comando.Append("join produto p(nolock) on pe.id_produto = p.id_produto ");
+                comando.Append("from produto_estoque pe (nolock) ");
+                comando.Append("join produto p (nolock) on pe.id_produto = p.id_produto ");
                 comando.Append("where p.descricao = @produto ");
 
                 SqlCommand cmd = new SqlCommand(comando.ToString(), conn);
                 cmd.Parameters.AddWithValue("@produto", produto);
-                try
-                {
-                    conn.Open();
-                    retorno = (double)cmd.ExecuteScalar();
-                    conn.Close();
-                }
-                catch (Exception ex)
-                {
-                    System.Windows.Forms.MessageBox.Show(ex.Message);
-                }
+
+                conn.Open();
+                retorno = cmd.ExecuteScalar().ToString();
+                conn.Close();
 
                 return retorno;
             }
@@ -619,6 +616,7 @@ namespace Industria
                 catch (Exception ex)
                 {
                     System.Windows.Forms.MessageBox.Show(ex.Message);
+                    //System.Windows.Forms.MessageBox.Show("5");
                 }
             }
         }
@@ -638,6 +636,7 @@ namespace Industria
                 catch (Exception ex)
                 {
                     System.Windows.Forms.MessageBox.Show(ex.Message);
+                    //System.Windows.Forms.MessageBox.Show("6");
                 }
                 return retorno;
             }
@@ -668,6 +667,7 @@ namespace Industria
                 catch (Exception ex)
                 {
                     System.Windows.Forms.MessageBox.Show(ex.Message);
+                    //System.Windows.Forms.MessageBox.Show("7");
                 }
             }
         }
@@ -695,6 +695,7 @@ namespace Industria
                     catch (Exception ex)
                     {
                         System.Windows.Forms.MessageBox.Show(ex.Message);
+                        //System.Windows.Forms.MessageBox.Show("8");
                     }
                 }
             }
@@ -722,6 +723,7 @@ namespace Industria
                     catch (Exception ex)
                     {
                         System.Windows.Forms.MessageBox.Show(ex.Message);
+                        //System.Windows.Forms.MessageBox.Show("10");
                     }
                 }
             }
@@ -751,6 +753,7 @@ namespace Industria
                 catch (Exception ex)
                 {
                     System.Windows.Forms.MessageBox.Show(ex.Message);
+                    //System.Windows.Forms.MessageBox.Show("11");
                 }
             }
         }
@@ -775,6 +778,7 @@ namespace Industria
                 catch (Exception ex)
                 {
                     System.Windows.Forms.MessageBox.Show(ex.Message);
+                    //System.Windows.Forms.MessageBox.Show("12");
                 }
             }
         }
@@ -816,6 +820,7 @@ namespace Industria
                             catch (Exception ex)
                             {
                                 System.Windows.Forms.MessageBox.Show(ex.Message);
+                                //System.Windows.Forms.MessageBox.Show("13");
                             }
                         }
                     }
@@ -827,13 +832,23 @@ namespace Industria
                 }
             }
         }
-        public void pedidoGrava(int id_pedido, string id_produto)
+        public void pedidoGrava(int id_tipo, int id_pedido, string id_produto)
         {
             using (SqlConnection conn = new SqlConnection(con))
             {
+                string operador;
+                if (id_tipo == 1)
+                {
+                    operador = "+";
+                }
+                else
+                {
+                    operador = "-";
+                }
+
                 StringBuilder comando = new StringBuilder();
                 comando.Append("update produto_estoque ");
-                comando.Append("set estoque = estoque + ");
+                comando.Append("set estoque = estoque " + operador + " ");
                 comando.Append("(select quantidade from pedido_item ");
                 comando.Append("where id_pedido = @id_pedido and id_produto = ");
                 comando.Append("(select id_produto from produto where descricao = @id_produto)) ");
@@ -852,6 +867,7 @@ namespace Industria
                 catch (Exception ex)
                 {
                     System.Windows.Forms.MessageBox.Show(ex.Message);
+                    //System.Windows.Forms.MessageBox.Show("14");
                 }
             }
         }

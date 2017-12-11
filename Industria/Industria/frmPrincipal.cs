@@ -36,7 +36,7 @@ namespace Industria
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            bd bd = new bd();
+            /*bd bd = new bd();
             try
             {
                 bd.TestaConexao();
@@ -45,7 +45,7 @@ namespace Industria
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
+            }*/
         }
 
         private void listaTécnicaToolStripMenuItem1_Click(object sender, EventArgs e)

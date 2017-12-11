@@ -37,6 +37,12 @@ namespace Industria
             this.Close();
         }
 
+        private void atualizaEstoque()
+        {
+            bd bd = new bd();
+            txtEstoque.Text = bd.pedido_produto_estoque(cmbProduto.Text).ToString();
+        }
+
         private void frmPedidoCompra_Load(object sender, EventArgs e)
         {
             bd bd = new bd();
@@ -49,8 +55,6 @@ namespace Industria
 
             cmbProduto.DataSource = bd.cmbProdutoPedido(2, id_pedido);
             cmbProduto.DisplayMember = "descricao";
-
-            txtEstoque.Text = bd.pedido_produto_estoque(cmbProduto.Text).ToString();
 
             btnInserir.Enabled = false;
             cmbProdutoRemover.Enabled = false;
@@ -102,30 +106,76 @@ namespace Industria
             {
                 if (dataGridView1.Rows.Count == 0)
                 {
-                    bd.inserePedido(cmbTipo.Text, cmbEntidade.Text);
-                    id_pedido = bd.retorna_idPedido();
-                    groupBox1.Text = "Cabeçalho (pedido " + id_pedido.ToString() + ")";
-                    cmbTipo.Enabled = false;
-                    cmbEntidade.Enabled = false;
+                    if (cmbTipo.Text == "Saída")
+                    {
+                        if (Convert.ToDouble(txtEstoque.Text) > 0 && Convert.ToDouble(txtEstoque.Text) >= Convert.ToDouble(txtQtde.Text))
+                        {
+                            bd.inserePedido(cmbTipo.Text, cmbEntidade.Text);
+                            id_pedido = bd.retorna_idPedido();
+                            groupBox1.Text = "Cabeçalho (pedido " + id_pedido.ToString() + ")";
+                            cmbTipo.Enabled = false;
+                            cmbEntidade.Enabled = false;
 
-                    bd.inserePedidoItem(id_pedido, cmbProduto.Text, Convert.ToDouble(txtQtde.Text));
-                    atualizacmbTipo();
-                    dataGridView1.DataSource = bd.pedidoItens(id_pedido);
-                    txtQtde.Clear();
+                            bd.inserePedidoItem(id_pedido, cmbProduto.Text, Convert.ToDouble(txtQtde.Text));
+                            atualizacmbTipo();
+                            dataGridView1.DataSource = bd.pedidoItens(id_pedido);
+                            txtQtde.Clear();
 
-                    cmbProdutoRemover.Enabled = true;
-                    btnRemover.Enabled = true;
+                            cmbProdutoRemover.Enabled = true;
+                            btnRemover.Enabled = true; 
+                        }
+                        else
+                        {
+                            MessageBox.Show("Não há estoque suficiente para a operação de saída");
+                        }
+                    }
+                    else
+                    {
+                        bd.inserePedido(cmbTipo.Text, cmbEntidade.Text);
+                        id_pedido = bd.retorna_idPedido();
+                        groupBox1.Text = "Cabeçalho (pedido " + id_pedido.ToString() + ")";
+                        cmbTipo.Enabled = false;
+                        cmbEntidade.Enabled = false;
+
+                        bd.inserePedidoItem(id_pedido, cmbProduto.Text, Convert.ToDouble(txtQtde.Text));
+                        atualizacmbTipo();
+                        dataGridView1.DataSource = bd.pedidoItens(id_pedido);
+                        txtQtde.Clear();
+
+                        cmbProdutoRemover.Enabled = true;
+                        btnRemover.Enabled = true;
+                    }
                     
                 }
                 else
                 {
-                    bd.inserePedidoItem(id_pedido, cmbProduto.Text, Convert.ToDouble(txtQtde.Text));
-                    atualizacmbTipo();
-                    dataGridView1.DataSource = bd.pedidoItens(id_pedido);
-                    txtQtde.Clear();
+                    if (cmbTipo.Text == "Entrada")
+                    {
+                        bd.inserePedidoItem(id_pedido, cmbProduto.Text, Convert.ToDouble(txtQtde.Text));
+                        atualizacmbTipo();
+                        dataGridView1.DataSource = bd.pedidoItens(id_pedido);
+                        txtQtde.Clear();
 
-                    cmbProdutoRemover.Enabled = true;
-                    btnRemover.Enabled = true;
+                        cmbProdutoRemover.Enabled = true;
+                        btnRemover.Enabled = true; 
+                    }
+                    else
+                    {
+                        if (Convert.ToDouble(txtEstoque.Text) > 0 && Convert.ToDouble(txtEstoque.Text) >= Convert.ToDouble(txtQtde.Text))
+                        {
+                            bd.inserePedidoItem(id_pedido, cmbProduto.Text, Convert.ToDouble(txtQtde.Text));
+                            atualizacmbTipo();
+                            dataGridView1.DataSource = bd.pedidoItens(id_pedido);
+                            txtQtde.Clear();
+
+                            cmbProdutoRemover.Enabled = true;
+                            btnRemover.Enabled = true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Não há estoque suficiente para a operação de saída");
+                        }
+                    }
                 }
                 btnGravar.Enabled = true;
             }
@@ -159,17 +209,45 @@ namespace Industria
         private void btnGravar_Click(object sender, EventArgs e)
         {
             bd bd = new bd();
-            
+
+            int id_tipo;
+
+            if (cmbTipo.Text == "Entrada")
+            {
+                id_tipo = 1;
+            }
+            else
+            {
+                id_tipo = 2;
+            }
+
             try
             {
-                foreach (DataGridViewRow row in dataGridView1.Rows)
+                if (id_tipo == 1)
                 {
-                    foreach (DataGridViewCell cell in row.Cells)
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
                     {
-                        if (cell.ColumnIndex == 0)
+                        foreach (DataGridViewCell cell in row.Cells)
                         {
-                            bd.pedidoGrava(id_pedido, cell.Value.ToString());
-                            //MessageBox.Show(cell.ToString());
+                            if (cell.ColumnIndex == 0)
+                            {
+                                bd.pedidoGrava(id_tipo, id_pedido, cell.Value.ToString());
+                                //MessageBox.Show(cell.ToString());
+                            }
+                        }
+                    } 
+                }
+                else
+                {
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
+                    {
+                        foreach (DataGridViewCell cell in row.Cells)
+                        {
+                            if (cell.ColumnIndex == 0)
+                            {
+                                bd.pedidoGrava(id_tipo, id_pedido, cell.Value.ToString());
+                                //MessageBox.Show(cell.ToString());
+                            }
                         }
                     }
                 }
@@ -180,6 +258,31 @@ namespace Industria
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void cmbProduto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbProduto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            bd bd = new bd();
+            try
+            {
+                atualizaEstoque();
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message.StartsWith("Referência de objeto não definida para uma instância de um objeto"))
+                {
+                    // EU NAO SEI PQ MAS FUNCIONA
+                }
+                else
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
     }
