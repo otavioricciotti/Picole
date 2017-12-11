@@ -103,5 +103,16 @@ namespace Industria
                 fpc.Show();
             }
         }
+
+        private void consultaToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            frmPedidoConsulta fpc = new frmPedidoConsulta();
+
+            fpc.MdiParent = this;
+            if (fpc.Visible == false)
+            {
+                fpc.Show();
+            }
+        }
     }
 }
