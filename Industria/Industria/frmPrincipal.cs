@@ -91,5 +91,17 @@ namespace Industria
                 feco.Show();
             }
         }
+
+        private void cadastroToolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+            frmPedidoCompra fpc = new frmPedidoCompra();
+
+            fpc.MdiParent = this;
+
+            if (fpc.Visible == false)
+            {
+                fpc.Show();
+            }
+        }
     }
 }
