@@ -89,6 +89,7 @@
             this.Name = "frmProdutoEstoque";
             this.ShowIcon = false;
             this.Text = "frmProdutoEstoque";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmProdutoEstoque_FormClosed);
             this.Load += new System.EventHandler(this.frmProdutoEstoque_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgEstoque)).EndInit();
             this.ResumeLayout(false);

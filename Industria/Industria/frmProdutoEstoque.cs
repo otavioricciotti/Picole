@@ -29,5 +29,10 @@ namespace Industria
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void frmProdutoEstoque_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

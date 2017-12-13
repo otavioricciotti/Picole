@@ -937,5 +937,58 @@ namespace Industria
 
             return dados;
         }
+
+        // FORM CADASTRO DE ORDEM DE PRODUÇÃO
+        public int max_producao(string produto)
+        {
+            using (SqlConnection conn = new SqlConnection(con))
+            {
+                int retorno = 0;
+
+                StringBuilder comando = new StringBuilder();
+
+                comando.Append("select cast(min(pe.estoque / pli.quantidade) as int) as min ");
+                comando.Append("from produto_lista_item pli (nolock) ");
+                comando.Append("join produto_estoque pe (nolock) on pli.id_produto = pe.id_produto ");
+                comando.Append("join produto_lista pl (nolock) on pli.id_lista = pl.id_lista ");
+                comando.Append("where pl.id_produto = (select id_produto from produto where descricao = @prod) ");
+
+                SqlCommand cmd = new SqlCommand(comando.ToString(), conn);
+                cmd.Parameters.AddWithValue("@prod", produto);
+
+                try
+                {
+                    retorno = (int)cmd.ExecuteScalar();
+                }
+                catch (Exception ex)
+                {
+                    System.Windows.Forms.MessageBox.Show(ex.Message);
+                }
+
+                return retorno;
+            }
+        }
+        public DataTable cmbProdutoAcabado()
+        {
+            DataTable dados = new DataTable();
+
+            using (SqlConnection conn = new SqlConnection(con))
+            {
+                string comando = "select descricao from produto where id_tipo_produto = 1";
+                using (SqlDataAdapter da = new SqlDataAdapter(comando, conn))
+                {
+                    try
+                    {
+                        da.Fill(dados);
+                    }
+                    catch (Exception ex)
+                    {
+                        System.Windows.Forms.MessageBox.Show(ex.Message);
+                    }
+                }
+            }
+            return dados;
+        }
+
     }
 }

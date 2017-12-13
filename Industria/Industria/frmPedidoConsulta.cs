@@ -71,5 +71,10 @@ namespace Industria
                 MessageBox.Show("Pedido não encontrado!");
             }
         }
+
+        private void frmPedidoConsulta_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

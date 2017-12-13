@@ -10,11 +10,6 @@ namespace Industria
             InitializeComponent();
         }
 
-        frmProdutoCadastro prod = new frmProdutoCadastro();
-        frmProdutoConsulta prodC = new frmProdutoConsulta();
-        frmProdutoLista pdl = new frmProdutoLista();
-        frmProdutoEstoque pes = new frmProdutoEstoque();
-
         private void cadastroToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             frmProdutoCadastro prod = new frmProdutoCadastro();
@@ -27,6 +22,7 @@ namespace Industria
 
         private void consultaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            frmProdutoConsulta prodC = new frmProdutoConsulta();
             prodC.MdiParent = this;
             if (prodC.Visible == false)
             {
@@ -36,20 +32,12 @@ namespace Industria
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            /*bd bd = new bd();
-            try
-            {
-                bd.TestaConexao();
-                MessageBox.Show("DEU CERTO!");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }*/
+            
         }
 
         private void listaTécnicaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            frmProdutoLista pdl = new frmProdutoLista();
             pdl.MdiParent = this;
             if (pdl.Visible == false)
             {
@@ -74,10 +62,18 @@ namespace Industria
 
         private void estoqueToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            pes.MdiParent = this;
-            if (pes.Visible == false)
+            try
             {
-                pes.Show();
+                frmProdutoEstoque pes = new frmProdutoEstoque();
+                pes.MdiParent = this;
+                if (pes.Visible == false)
+                {
+                    pes.Show();
+                }
+            }
+            catch (Exception ex)
+            {
+                
             }
         }
 
@@ -112,6 +108,23 @@ namespace Industria
             if (fpc.Visible == false)
             {
                 fpc.Show();
+            }
+        }
+
+        private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void novoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEntidadeCadastro foc = new frmEntidadeCadastro();
+
+            foc.MdiParent = this;
+
+            if (foc.Visible == false)
+            {
+                foc.Show();
             }
         }
     }
