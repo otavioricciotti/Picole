@@ -66,7 +66,7 @@ namespace Industria
                 bd bd = new bd();
                 dataGridView2.DataSource = bd.consultapedidoitem(textBox1.Text);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Pedido não encontrado!");
             }

@@ -73,7 +73,7 @@ namespace Industria
             }
             catch (Exception ex)
             {
-                
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -118,7 +118,7 @@ namespace Industria
 
         private void novoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmEntidadeCadastro foc = new frmEntidadeCadastro();
+            frmOrdemCadastro foc = new frmOrdemCadastro();
 
             foc.MdiParent = this;
 

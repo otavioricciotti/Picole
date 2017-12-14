@@ -155,7 +155,7 @@
             this.MinimizeBox = false;
             this.Name = "frmEntidadeConsulta";
             this.ShowIcon = false;
-            this.Text = "frmEntidadeConsulta";
+            this.Text = "Consulta de entidade";
             this.Load += new System.EventHandler(this.frmEntidadeConsulta_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

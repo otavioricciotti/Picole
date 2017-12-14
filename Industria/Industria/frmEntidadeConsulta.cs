@@ -30,10 +30,17 @@ namespace Industria
         private void btnConsultar_Click(object sender, EventArgs e)
         {
             bd bd = new bd();
-            txtRazao.Text = bd.entidadeConsulta(Convert.ToInt32(txtCodigo.Text)).Rows[0]["razao_social"].ToString();
-            txtDOC.Text = bd.entidadeConsulta(Convert.ToInt32(txtCodigo.Text)).Rows[0]["cpf_cnpj"].ToString();
-            txtFantasia.Text = bd.entidadeConsulta(Convert.ToInt32(txtCodigo.Text)).Rows[0]["fantasia"].ToString();
-            cmbTipo.Text = bd.entidadeConsulta(Convert.ToInt32(txtCodigo.Text)).Rows[0]["tipo_entidade"].ToString();
+            try
+            {
+                txtRazao.Text = bd.entidadeConsulta(Convert.ToInt32(txtCodigo.Text)).Rows[0]["razao_social"].ToString();
+                txtDOC.Text = bd.entidadeConsulta(Convert.ToInt32(txtCodigo.Text)).Rows[0]["cpf_cnpj"].ToString();
+                txtFantasia.Text = bd.entidadeConsulta(Convert.ToInt32(txtCodigo.Text)).Rows[0]["fantasia"].ToString();
+                cmbTipo.Text = bd.entidadeConsulta(Convert.ToInt32(txtCodigo.Text)).Rows[0]["tipo_entidade"].ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

@@ -44,7 +44,6 @@
             this.consultaToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.produçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultaToolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.status = new System.Windows.Forms.StatusStrip();
             this.menu.SuspendLayout();
             this.SuspendLayout();
@@ -161,8 +160,7 @@
             // produçãoToolStripMenuItem
             // 
             this.produçãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.novoToolStripMenuItem,
-            this.consultaToolStripMenuItem7});
+            this.novoToolStripMenuItem});
             this.produçãoToolStripMenuItem.Name = "produçãoToolStripMenuItem";
             this.produçãoToolStripMenuItem.Size = new System.Drawing.Size(126, 20);
             this.produçãoToolStripMenuItem.Text = "Ordem de Produção";
@@ -173,12 +171,6 @@
             this.novoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.novoToolStripMenuItem.Text = "Cadastro";
             this.novoToolStripMenuItem.Click += new System.EventHandler(this.novoToolStripMenuItem_Click);
-            // 
-            // consultaToolStripMenuItem7
-            // 
-            this.consultaToolStripMenuItem7.Name = "consultaToolStripMenuItem7";
-            this.consultaToolStripMenuItem7.Size = new System.Drawing.Size(152, 22);
-            this.consultaToolStripMenuItem7.Text = "Consulta";
             // 
             // status
             // 
@@ -222,7 +214,6 @@
         private System.Windows.Forms.ToolStripMenuItem novoToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem6;
         private System.Windows.Forms.ToolStripMenuItem novoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem7;
         private System.Windows.Forms.ToolStripMenuItem pedidoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem6;
         private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem4;
