@@ -32,6 +32,8 @@
             this.btnConsulta = new System.Windows.Forms.Button();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.dtgLista = new System.Windows.Forms.DataGridView();
+            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,8 +42,6 @@
             this.cmbMateriaRemover = new System.Windows.Forms.ComboBox();
             this.btnInserir = new System.Windows.Forms.Button();
             this.btnRemover = new System.Windows.Forms.Button();
-            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgLista)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,6 +70,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(130, 20);
             this.txtCodigo.TabIndex = 2;
+            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // dtgLista
             // 
@@ -85,6 +86,23 @@
             this.dtgLista.RowHeadersVisible = false;
             this.dtgLista.Size = new System.Drawing.Size(261, 152);
             this.dtgLista.TabIndex = 3;
+            // 
+            // descricao
+            // 
+            this.descricao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descricao.DataPropertyName = "descricao";
+            this.descricao.HeaderText = "Matéria";
+            this.descricao.Name = "descricao";
+            this.descricao.ReadOnly = true;
+            // 
+            // quantidade
+            // 
+            this.quantidade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.quantidade.DataPropertyName = "quantidade";
+            this.quantidade.HeaderText = "Qtde";
+            this.quantidade.Name = "quantidade";
+            this.quantidade.ReadOnly = true;
+            this.quantidade.Width = 55;
             // 
             // label2
             // 
@@ -159,23 +177,6 @@
             this.btnRemover.Text = "Remover";
             this.btnRemover.UseVisualStyleBackColor = true;
             this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
-            // 
-            // descricao
-            // 
-            this.descricao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.descricao.DataPropertyName = "descricao";
-            this.descricao.HeaderText = "Matéria";
-            this.descricao.Name = "descricao";
-            this.descricao.ReadOnly = true;
-            // 
-            // quantidade
-            // 
-            this.quantidade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.quantidade.DataPropertyName = "quantidade";
-            this.quantidade.HeaderText = "Qtde";
-            this.quantidade.Name = "quantidade";
-            this.quantidade.ReadOnly = true;
-            this.quantidade.Width = 55;
             // 
             // frmProdutoLista
             // 

@@ -43,15 +43,24 @@ namespace Industria
 
             return dados;
         }
-        public DataTable preenche_cmbMateriaInsere()
+        public DataTable preenche_cmbMateriaInsere(int id_produto)
         {
             DataTable dados = new DataTable();
 
             using (SqlConnection conn = new SqlConnection(con))
             {
-                string comando = "select descricao from produto where id_tipo_produto = 2";
-                using (SqlDataAdapter da = new SqlDataAdapter(comando, conn))
+                StringBuilder comando = new StringBuilder();
+
+                comando.Append("select p.descricao from produto p where p.id_tipo_produto = 2 ");
+                comando.Append("and p.id_produto not in  ");
+                comando.Append("(select pli.id_produto from produto_lista_item pli ");
+                comando.Append("join produto_lista pl on pli.id_lista = pl.id_lista ");
+                comando.Append("where pl.id_produto = @id) ");
+
+                using (SqlDataAdapter da = new SqlDataAdapter(comando.ToString(), conn))
                 {
+                    da.SelectCommand.Parameters.AddWithValue("@id", id_produto);
+
                     try
                     {
                         da.Fill(dados);

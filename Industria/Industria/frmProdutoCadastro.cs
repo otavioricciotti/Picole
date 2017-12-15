@@ -49,6 +49,11 @@ namespace Industria
             {
                 MessageBox.Show(ex.Message);
             }
+
+            if (cmbTipo.Text == "Produto acabado")
+            {
+                bd.insere_lista();
+            }
         }
     }
 }

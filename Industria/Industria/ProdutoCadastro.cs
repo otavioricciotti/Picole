@@ -110,6 +110,30 @@ namespace Industria
                 return retorno;
             }
         }
+        public void insere_lista()
+        {
+            using (SqlConnection conn = new SqlConnection(con))
+            {
+                StringBuilder comando = new StringBuilder();
+
+                comando.Append("insert into produto_lista values ");
+                comando.Append("((select max(id_lista)+1 from produto_lista), ");
+                comando.Append("(select max(id_produto) from produto)) ");
+
+                SqlCommand cmd = new SqlCommand(comando.ToString(), conn);
+
+                try
+                {
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+                catch (Exception ex)
+                {
+                    System.Windows.Forms.MessageBox.Show(ex.Message);
+                }
+            }
+        }
 
     }
 }

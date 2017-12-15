@@ -30,7 +30,7 @@ namespace Industria
         {
             ProdutoLista bd = new ProdutoLista();
 
-            cmbMateriaInserir.DataSource = bd.preenche_cmbMateriaInsere();
+            cmbMateriaInserir.DataSource = bd.preenche_cmbMateriaInsere(Convert.ToInt32(txtCodigo.Text));
             cmbMateriaInserir.DisplayMember = "descricao";
             cmbMateriaRemover.DataSource = bd.preenche_cmbMateriaRemove(Convert.ToInt32(txtCodigo.Text));
             cmbMateriaRemover.DisplayMember = "descricao";
@@ -86,7 +86,15 @@ namespace Industria
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+
+                if (txtQtde.TextLength == 0)
+                {
+                    MessageBox.Show("Insira a quantidade");
+                }
+                else
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 
@@ -103,6 +111,14 @@ namespace Industria
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
             }
         }
     }
