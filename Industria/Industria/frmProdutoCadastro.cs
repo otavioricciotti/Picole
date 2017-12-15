@@ -25,7 +25,7 @@ namespace Industria
             txtCx.Enabled = true;
             txtDescricao.Enabled = true;
 
-            bd bd = new bd();
+            ProdutoCadastro bd = new ProdutoCadastro();
             cmbMedida.DataSource = bd.preenche_cmbMedida();
             cmbMedida.DisplayMember = "descricao";
             cmbTipo.DataSource = bd.preenche_cmbTipo();
@@ -34,7 +34,7 @@ namespace Industria
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            bd bd = new bd();
+            ProdutoCadastro bd = new ProdutoCadastro();
 
             try
             {

@@ -21,7 +21,7 @@ namespace Industria
         {
             txtCodigo.Enabled = false;
 
-            bd bd = new bd();
+            EntidadeCadastro bd = new EntidadeCadastro();
 
             cmbTipo.DataSource = bd.preenche_cmbTipoEntidade();
             cmbTipo.DisplayMember = "descricao";
@@ -29,7 +29,7 @@ namespace Industria
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            bd bd = new bd();
+            EntidadeCadastro bd = new EntidadeCadastro();
 
             try
             {

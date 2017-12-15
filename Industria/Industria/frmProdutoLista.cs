@@ -28,7 +28,7 @@ namespace Industria
 
         private void atualizaCMB()
         {
-            bd bd = new bd();
+            ProdutoLista bd = new ProdutoLista();
 
             cmbMateriaInserir.DataSource = bd.preenche_cmbMateriaInsere();
             cmbMateriaInserir.DisplayMember = "descricao";
@@ -38,7 +38,7 @@ namespace Industria
 
         private void atualizaDTG()
         {
-            bd bd = new bd();
+            ProdutoLista bd = new ProdutoLista();
 
             try
             {
@@ -52,7 +52,7 @@ namespace Industria
 
         private void btnConsulta_Click(object sender, EventArgs e)
         {
-            bd bd = new bd();
+            ProdutoLista bd = new ProdutoLista();
 
             try
             {
@@ -76,7 +76,7 @@ namespace Industria
 
         private void btnInserir_Click(object sender, EventArgs e)
         {
-            bd bd = new bd();
+            ProdutoLista bd = new ProdutoLista();
 
             try
             {
@@ -92,7 +92,7 @@ namespace Industria
 
         private void btnRemover_Click(object sender, EventArgs e)
         {
-            bd bd = new bd();
+            ProdutoLista bd = new ProdutoLista();
 
             try
             {

@@ -11,7 +11,7 @@ namespace Industria
     class bd
     {
         private string con = @"Data Source=192.168.1.248;Initial Catalog=industria;User ID=otavio;Password=ota54321";
-
+        /*
         // TESTES GERAIS
         public void TestaConexao()
         {
@@ -1091,5 +1091,6 @@ namespace Industria
                 }
             }
         }
+        */
     }
 }

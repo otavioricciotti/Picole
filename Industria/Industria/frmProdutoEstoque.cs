@@ -21,7 +21,7 @@ namespace Industria
         {
             try
             {
-                bd bd = new bd();
+                ProdutoEstoque bd = new ProdutoEstoque();
                 dtgEstoque.DataSource = bd.produto_estoque();
             }
             catch (Exception ex)
@@ -32,7 +32,7 @@ namespace Industria
 
         private void frmProdutoEstoque_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Dispose();
+            
         }
     }
 }

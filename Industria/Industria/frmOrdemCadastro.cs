@@ -19,7 +19,7 @@ namespace Industria
 
         private void frmOrdemCadastro_Load(object sender, EventArgs e)
         {
-            bd bd = new bd();
+            OrdemCadastro bd = new OrdemCadastro();
 
             try
             {
@@ -34,7 +34,7 @@ namespace Industria
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            bd bd = new bd();
+            OrdemCadastro bd = new OrdemCadastro();
 
             try
             {
@@ -55,7 +55,7 @@ namespace Industria
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            bd bd = new bd();
+            OrdemCadastro bd = new OrdemCadastro();
 
             try
             {
@@ -86,7 +86,7 @@ namespace Industria
 
         private void button1_Click(object sender, EventArgs e)
         {
-            bd bd = new bd();
+            OrdemCadastro bd = new OrdemCadastro();
 
             if (Convert.ToInt32(textBox1.Text) > 0 && Convert.ToInt32(textBox1.Text) <= Convert.ToInt32(textBox2.Text))
             {

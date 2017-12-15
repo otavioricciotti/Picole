@@ -19,7 +19,7 @@ namespace Industria
 
         private void frmPedidoConsulta_Load(object sender, EventArgs e)
         {
-            bd bd = new bd();
+            PedidoConsulta bd = new PedidoConsulta();
 
             try
             {
@@ -42,7 +42,7 @@ namespace Industria
 
             try
             {
-                bd bd = new bd();
+                PedidoConsulta bd = new PedidoConsulta();
                 dataGridView2.DataSource = bd.consultapedidoitem(id_pedido);
             }
             catch (Exception ex)
@@ -63,7 +63,7 @@ namespace Industria
         {
             try
             {
-                bd bd = new bd();
+                PedidoConsulta bd = new PedidoConsulta();
                 dataGridView2.DataSource = bd.consultapedidoitem(textBox1.Text);
             }
             catch (Exception)

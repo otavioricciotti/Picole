@@ -21,7 +21,7 @@ namespace Industria
 
         private void Cancelar_Click(object sender, EventArgs e)
         {
-            bd bd = new bd();
+            PedidoCompra bd = new PedidoCompra();
             try
             {
                 if (id_pedido != 0)
@@ -39,13 +39,13 @@ namespace Industria
 
         private void atualizaEstoque()
         {
-            bd bd = new bd();
+            PedidoCompra bd = new PedidoCompra();
             txtEstoque.Text = bd.pedido_produto_estoque(cmbProduto.Text).ToString();
         }
 
         private void frmPedidoCompra_Load(object sender, EventArgs e)
         {
-            bd bd = new bd();
+            PedidoCompra bd = new PedidoCompra();
             id_pedido = 0;
             cmbTipo.DataSource = bd.cmbTipoPedido();
             cmbTipo.DisplayMember = "descricao";
@@ -65,7 +65,7 @@ namespace Industria
 
         private void atualizacmbTipo()
         {
-            bd bd = new bd();
+            PedidoCompra bd = new PedidoCompra();
 
             cmbProdutoRemover.DisplayMember = "descricao";
             if (cmbTipo.Text == "Entrada")
@@ -101,7 +101,7 @@ namespace Industria
 
         private void btnInserir_Click(object sender, EventArgs e)
         {
-            bd bd = new bd();
+            PedidoCompra bd = new PedidoCompra();
             try
             {
                 if (dataGridView1.Rows.Count == 0)
@@ -187,7 +187,7 @@ namespace Industria
 
         private void btnRemover_Click(object sender, EventArgs e)
         {
-            bd bd = new bd();
+            PedidoCompra bd = new PedidoCompra();
 
             try
             {
@@ -208,7 +208,7 @@ namespace Industria
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
-            bd bd = new bd();
+            PedidoCompra bd = new PedidoCompra();
 
             int id_tipo;
 
@@ -268,7 +268,7 @@ namespace Industria
 
         private void cmbProduto_SelectedIndexChanged(object sender, EventArgs e)
         {
-            bd bd = new bd();
+            PedidoCompra bd = new PedidoCompra();
             try
             {
                 atualizaEstoque();

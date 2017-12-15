@@ -24,7 +24,7 @@ namespace Industria
 
         private void button1_Click(object sender, EventArgs e)
         {
-            bd bd = new bd();
+            ProdutoConsulta bd = new ProdutoConsulta();
 
             try
             {

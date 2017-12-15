@@ -29,7 +29,7 @@ namespace Industria
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            bd bd = new bd();
+            EntidadeConsulta bd = new EntidadeConsulta();
             try
             {
                 txtRazao.Text = bd.entidadeConsulta(Convert.ToInt32(txtCodigo.Text)).Rows[0]["razao_social"].ToString();

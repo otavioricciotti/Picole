@@ -60,6 +60,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="bd.cs" />
+    <Compile Include="EntidadeCadastro.cs" />
+    <Compile Include="EntidadeConsulta.cs" />
     <Compile Include="frmEntidadeCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +128,13 @@
     <Compile Include="frmProdutoReceita.Designer.cs">
       <DependentUpon>frmProdutoReceita.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrdemCadastro.cs" />
+    <Compile Include="PedidoCompra.cs" />
+    <Compile Include="PedidoConsulta.cs" />
+    <Compile Include="ProdutoCadastro.cs" />
+    <Compile Include="ProdutoEstoque.cs" />
+    <Compile Include="ProdutoConsulta.cs" />
+    <Compile Include="ProdutoLista.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmEntidadeCadastro.resx">
